@@ -10,6 +10,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     JumbotronComponent,
     BlogDetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
