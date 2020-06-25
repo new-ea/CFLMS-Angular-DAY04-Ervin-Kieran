@@ -1,18 +1,16 @@
 <div class="container">
-  <div class="card-deck">
-    <div class="card" *ngFor="let blog of blogs; index as blogId">
+  <div class="row">
+    <div
+      class="col-xs-12 col-md-6 col-lg-3 mt-3 card"
+      *ngFor="let blog of blogs; index as blogId"
+    >
       <a [routerLink]="['blog', blogId]">
-        <img
-          class="card-img-top"
-          src="{{ blog.imgSrc }}"
-          alt=""
-          style="object-fit: cover; height: 100%;"
-        />
+        <img class="card-img-top mt-2" src="{{ blog.imgSrc }}" alt="" />
 
         <div class="card-body">
-          <h4 class="card-title">{{ blog.title }}</h4>
+          <h4 class="card-title text-nowrap">{{ blog.title }}</h4>
 
-          <p class="text-muted">{{ blog.date }}</p>
+          <p class="text-muted text-nowrap">{{ blog.date }} {{ blog.time }}</p>
         </div>
       </a>
     </div>
